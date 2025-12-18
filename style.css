@@ -2,7 +2,6 @@ h1,
 h2 {
     color: black;
     font-family: Georgia;
-    font-size: 24px;
     text-align: left;
 }
 
@@ -11,6 +10,13 @@ p {
     font-family: Tahoma;
     font-size: 16px;
     text-align: justify;
+}
+
+header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100px;
+    background-color: #002147;
 }
 
 body {
@@ -22,4 +28,14 @@ nav {
     justify-content: center;
     gap: 30px;
     margin: 20px 0;
+    color: white;
+
+
+}
+a {
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
 }
