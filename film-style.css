@@ -1,0 +1,263 @@
+header { 
+    margin-top: 0;
+    padding: 20px 0; /* Reduced padding */
+    height: auto;    /* Allow height to adjust to content */
+    background-color: #002147;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+body {
+    margin: 0;
+    background-color: #f0f8ff; /* Matches your screenshot background */
+    /* REMOVE: display: flex, justify-content, align-items, height: 100vh */
+    overflow-x: hidden; /* Prevents side-scrolling from 3D rotation */
+}
+
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 48px; /* Slightly smaller for better balance */
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.navbar select {
+    background: transparent;
+    color: white;
+    border: 1px solid #CBC3E3;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar select option {
+    background-color: #002147; /* Dark background for dropdown options */
+    color: white;
+}
+
+.navbar label {
+    color: #FFFFFF;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures label and links align perfectly */
+    gap: 20px;
+    padding: 10px;
+}
+
+.separator {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+
+}
+.navbar a.active {
+    color: #7f55ff;           /* Example: purple highlight */
+    font-weight: bold;        /* Optional: make it stand out */
+    padding-bottom: 2px;      /* Gives space for the underline */
+    border-bottom: 2px solid #7f55ff; /* Optional underline */
+}
+
+.navbar a:hover{
+    color: #CBC3E3;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Forces horizontal alignment */
+    align-items: flex-start;
+    justify-content: flex-start; /* Keeps them packed to the left */
+    padding: 20px;
+    margin: 40px auto;
+    border: 1px double black;
+    max-width: 900px; /* Increased slightly to fit all three elements */
+    gap: 20px; /* Consistent space between all items */
+}
+.myImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-wrapper {
+    flex: 0 0 200px; /* Width matching your iframe */
+    height: 200px;
+}
+
+.photo-container img {
+    width: 100%;
+    display: block;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.lightbox-content {
+    display: block;
+    margin: 5% auto;          /* centers the image vertically and horizontally */
+    max-width: 80%;           /* limits width to 80% of viewport */
+    max-height: 80vh;         /* limits height to 80% of viewport height */
+    object-fit: contain;      /* ensures the whole image fits inside without cropping */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* optional: nice shadow */
+    border-radius: 8px;       /* optional: rounded corners */
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main-video {
+    width: 300px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    /* This ensures children (img and icons) align to the left */
+    align-items: flex-start; 
+    align-self: flex-start;
+}
+
+.platform-icons {
+    display: flex;
+    /* This ensures the icons start at the very edge */
+    justify-content: flex-start; 
+    width: 100%;
+    margin-top: 5px; /* Adds a small gap below the image */
+}
+
+.platform-icons a.btn {
+    text-decoration: none;
+    /* Remove padding if you want it flush against the very edge */
+    padding: 8px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.platform-icons i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.platform-icons a.btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Icon Colors */
+.platform-icons .fa-youtube { color: #ff0000; }
+.platform-icons .fa-spotify { color: #1db954; }
+
+.content {
+    flex: 1; /* Takes up the rest of the room */
+    height: 200px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.tags {
+    background-color: plum; /* Matching the red in your reference image */
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    
+    /* Padding creates equal space around the text */
+    padding: 6px 20px; 
+    
+    /* This creates the pill shape */
+    border-radius: 50px; 
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tags p {
+    margin: 0; /* Removes default spacing that ruins centering */
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Matching the serif font in your image */
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 40px 0; /* Increased padding for a cleaner look */
+    width: 100%;
+    position: static;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.contacts {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Stacks the email on top of the Facebook link */
+    align-items: center;    /* Centers the stack horizontally */
+    gap: 15px;              /* Space between the two rows */
+}
+
+.contacts li {
+    display: flex;          /* Keeps icon and text side-by-side */
+    align-items: center;    /* Keeps icon and text leveled vertically */
+    justify-content: flex-start; /* Aligns content within the flex-box */
+    gap: 12px;              /* Space between icon and text */
+    width: fit-content;     /* Ensures the hover effect only covers the text/icon */
+}
+
+.contacts i {
+    color: #e0d6ff;;         /* Icon color */
+    font-size: 1.2rem;      /* Makes icons slightly larger than text */
+    width: 20px;            /* Fixed width so text starts at the same spot */
+    text-align: center;
+}
+
+.contacts a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;        /* Standard readable size */
+    font-family: Arial, sans-serif;
+}
+
+.contacts a:hover {
+    color: #CBC3E3;
+}
+
+
+
+
