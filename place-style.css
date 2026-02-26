@@ -1,21 +1,20 @@
 header { 
     margin-top: 0;
-    padding: 20px 0; /* Reduced padding */
-    height: auto;    /* Allow height to adjust to content */
+    padding: 20px 0; 
+    height: auto;    
     background-color: #002147;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 body {
     margin: 0;
-    background-color: #f0f8ff; /* Matches your screenshot background */
-    /* REMOVE: display: flex, justify-content, align-items, height: 100vh */
-    overflow-x: hidden; /* Prevents side-scrolling from 3D rotation */
+    background-color: #f0f8ff; 
+    overflow-x: hidden; 
 }
 
 
 h1 {
     font-family: Georgia, serif;
-    font-size: 48px; /* Slightly smaller for better balance */
+    font-size: 48px; 
     margin-bottom: 15px;
     color: #FFFFFF;
 }
@@ -33,7 +32,7 @@ h1 {
 }
 
 .navbar select option {
-    background-color: #002147; /* Dark background for dropdown options */
+    background-color: #002147; 
     color: white;
 }
 
@@ -48,7 +47,7 @@ h1 {
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center; /* Ensures label and links align perfectly */
+    align-items: center; 
     gap: 20px;
     padding: 10px;
 }
@@ -68,10 +67,10 @@ h1 {
 
 }
 .navbar a.active {
-    color: #7f55ff;           /* Example: purple highlight */
-    font-weight: bold;        /* Optional: make it stand out */
-    padding-bottom: 2px;      /* Gives space for the underline */
-    border-bottom: 2px solid #7f55ff; /* Optional underline */
+    color: #7f55ff;          
+    font-weight: bold;       
+    padding-bottom: 2px;    
+    border-bottom: 2px solid #7f55ff; 
 }
 
 .navbar a:hover{
@@ -109,15 +108,15 @@ html{
 
 .back {
     display: flex;
-    justify-content: flex-end; /* Pushes content to the right */
-    padding: 20px 50px;       /* Top/Bottom 20px, Left/Right 50px */
-    margin-top: 20px;          /* Adds space below your footer/last item */
+    justify-content: flex-end; 
+    padding: 20px 50px;       
+    margin-top: 20px;         
 }
 
 .back p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000000;
-    margin: 0;                 /* Removes default paragraph spacing */
+    margin: 0;                 
 }
 
 .back a {
@@ -135,7 +134,7 @@ footer {
     background-color: #002147;
     color: white;
     text-align: center;
-    padding: 40px 0; /* Increased padding for a cleaner look */
+    padding: 40px 0; 
     width: 100%;
     position: static;
     margin-top: 50px;
@@ -147,30 +146,30 @@ footer {
     padding: 0;
     margin: 20px 0;
     display: flex;
-    flex-direction: column; /* Stacks the email on top of the Facebook link */
-    align-items: center;    /* Centers the stack horizontally */
-    gap: 15px;              /* Space between the two rows */
+    flex-direction: column; 
+    align-items: center;    
+    gap: 15px;             
 }
 
 .contacts li {
-    display: flex;          /* Keeps icon and text side-by-side */
-    align-items: center;    /* Keeps icon and text leveled vertically */
-    justify-content: flex-start; /* Aligns content within the flex-box */
-    gap: 12px;              /* Space between icon and text */
-    width: fit-content;     /* Ensures the hover effect only covers the text/icon */
+    display: flex;          
+    align-items: center;    
+    justify-content: flex-start; 
+    gap: 12px;              
+    width: fit-content;     
 }
 
 .contacts i {
-    color: #e0d6ff;;         /* Icon color */
-    font-size: 1.2rem;      /* Makes icons slightly larger than text */
-    width: 20px;            /* Fixed width so text starts at the same spot */
+    color: #e0d6ff;;        
+    font-size: 1.2rem;      
+    width: 20px;            
     text-align: center;
 }
 
 .contacts a {
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 13px;        /* Standard readable size */
+    font-size: 13px;        
     font-family: Arial, sans-serif;
 }
 
@@ -179,16 +178,16 @@ footer {
 }
 
 .description{
-    max-width: 900px;     /* still readable, but not boxed */
-    margin: 30px auto;    /* less vertical bulk */
+    max-width: 900px;     
+    margin: 30px auto;    
 }
 
 .description p{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000;
-    line-height: 1.6;     /* natural reading */
-    font-size: 1rem;      /* keep original size */
+    line-height: 1.6;     
+    font-size: 1rem;      
 }
 
 .description b{
