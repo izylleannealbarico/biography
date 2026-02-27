@@ -211,8 +211,8 @@ ul li:hover ul.dropdown{
 }
 
 .photo-container img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     object-fit: cover; /* This is the secret sauce: it fills the box without stretching */
     display: block;
 }
@@ -263,3 +263,29 @@ footer {
 .contacts a:hover {
     color: #CBC3E3;
 }
+
+/* BACK TO TOP */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #066fe7;
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background: #004080;
+    transform: translateY(-4px);
+}
+

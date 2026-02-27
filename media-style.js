@@ -25,36 +25,6 @@ document.querySelectorAll('.myImage').forEach(img => {
 });
 
 
-// ==========================
-// AUDIO PLAY BUTTON FUNCTIONALITY
-// ==========================
-document.querySelectorAll('.container').forEach(container => {
-    const playBtn = container.querySelector('.play-btn');
-    const audio = container.querySelector('audio');
-
-    // Guard: skip this container if either element doesn't exist
-    if (!playBtn || !audio) return;
-
-    playBtn.addEventListener('click', () => {
-        if (audio.paused) {
-            // Pause all other audio on the page
-            document.querySelectorAll('audio').forEach(a => a.pause());
-
-            // Reset all other play buttons to "play" icon
-            document.querySelectorAll('.play-btn').forEach(b =>
-                b.classList.replace('fa-pause', 'fa-play')
-            );
-
-            // Play this audio and toggle button
-            audio.play();
-            playBtn.classList.replace('fa-play', 'fa-pause');
-        } else {
-            // Pause audio and toggle button
-            audio.pause();
-            playBtn.classList.replace('fa-pause', 'fa-play');
-        }
-    });
-});
 
 
 // ==========================
@@ -86,25 +56,102 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.querySelectorAll('.container').forEach(container => {
+    const playBtn = container.querySelector('.play-btn');
+    const audio = container.querySelector('audio');
 
-// Select ALL audio elements on the page
-const allAudios = document.querySelectorAll('audio');
+    if (!playBtn || !audio) return;
 
-allAudios.forEach(audio => {
-    audio.addEventListener('timeupdate', function() {
-        // Check if the current song has passed 30 seconds
-        if (this.currentTime >= 30) {
-            this.pause();
-            this.currentTime = 0; // Resets to the start
-            
-            // Optional: Reset the play button icon back to 'play'
-            const container = this.closest('.container');
-            const playBtn = container.querySelector('.play-btn');
-            if (playBtn) {
-                playBtn.classList.replace('fa-pause', 'fa-play');
+    const previewLimit = 30000; // 30 seconds in ms
+    const fadeDuration = 800;
+
+    let fadeInterval = null;
+    let previewTimeout = null;
+
+    function resetAudio(btn) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 1;
+
+        clearTimeout(previewTimeout);
+        previewTimeout = null;
+
+        btn.classList.remove('fa-pause');
+        btn.classList.add('fa-play');
+    }
+
+    function fadeOutAndStop(btn) {
+        if (fadeInterval) clearInterval(fadeInterval);
+
+        const steps = 20;
+        const stepTime = fadeDuration / steps;
+        let step = 0;
+        const startVolume = audio.volume;
+
+        fadeInterval = setInterval(() => {
+            step++;
+            audio.volume = Math.max(0, startVolume * (1 - step / steps));
+
+            if (step >= steps) {
+                clearInterval(fadeInterval);
+                fadeInterval = null;
+                resetAudio(btn);
             }
+        }, stepTime);
+    }
 
-            alert("Preview limit reached."); 
+    playBtn.addEventListener('click', () => {
+
+        // ⏹ Manual stop
+        if (!audio.paused) {
+            fadeOutAndStop(playBtn);
+            return;
         }
+
+        // Stop all others immediately
+        document.querySelectorAll('audio').forEach(a => {
+            if (a !== audio) {
+                a.pause();
+                a.currentTime = 0;
+                a.volume = 1;
+            }
+        });
+
+        document.querySelectorAll('.play-btn').forEach(b => {
+            b.classList.remove('fa-pause');
+            b.classList.add('fa-play');
+        });
+
+        if (fadeInterval) clearInterval(fadeInterval);
+        if (previewTimeout) clearTimeout(previewTimeout);
+
+        audio.currentTime = 0;
+        audio.volume = 1;
+        audio.play();
+
+        playBtn.classList.remove('fa-play');
+        playBtn.classList.add('fa-pause');
+
+        // ⏱ HARD 30-SECOND TIMER (bulletproof)
+        previewTimeout = setTimeout(() => {
+            fadeOutAndStop(playBtn);
+        }, previewLimit);
+    });
+});
+// BACK TO TOP BUTTON
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 });

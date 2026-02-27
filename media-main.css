@@ -321,4 +321,10 @@ footer {
     color: #CBC3E3;
 }
 
-
+main .labels{
+    margin-top: 50px;
+}
+main .labels h1{
+    text-align: center;
+    font-size: 40px;
+}

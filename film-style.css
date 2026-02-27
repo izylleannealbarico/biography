@@ -331,6 +331,36 @@ footer {
     color: #CBC3E3;
 }
 
+/* BACK TO TOP */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #066fe7;
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+}
 
+#backToTop:hover {
+    background: #004080;
+    transform: translateY(-4px);
+}
 
+main .labels{
+    margin-top: 50px;
+}
+main .labels h1{
+    text-align: center;
+    font-size: 40px;
+}
 
