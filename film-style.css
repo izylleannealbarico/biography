@@ -137,6 +137,8 @@ ul li:hover ul.dropdown{
     border: 1px double black;
     max-width: 900px; /* Increased slightly to fit all three elements */
     gap: 20px; /* Consistent space between all items */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background-color: #FFFFFF;
 }
 .myImage {
     width: 200px;

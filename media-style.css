@@ -134,6 +134,8 @@ ul li:hover ul.dropdown{
     margin: 40px auto;
     border: 1px double black;
     max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background-color: #FFFFFF;
 }
 
 .photo-container {
