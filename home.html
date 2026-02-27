@@ -5,111 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="home-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/641ba9ca8c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/641ba9ca8c.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-     <header>
-   <h1 style="text-align: center;">My story starts here...</h1>
-
-    <nav class="navbar">
-  <ul>
-    <li><a class="active" href="https://izylleannealbarico.github.io/unwritten/home.html" title="Home">Home</a></li>
-    <li class="separator"></li>
-    <li><a href="https://izylleannealbarico.github.io/unwritten/albarico_biography_csad.html" target="portfolio_view" title="About Me">About Me</a></li>
-    <li class="separator"></li>
-    <li>
-      <label for="blog">Blogs</label>
-      <select name="blog" id="blog" onchange="if(this.value) window.open(this.value, 'portfolio_view');">
-        <option value="" selected disabled>Select a Blog</option>
-        <option value="https://izylleannealbarico.github.io/unwritten/ALBARICO_BIO-PART1_CSAD.html" title="BLOG 1">BLOG 1: TECHNOLOGY RELATED</option>
-        <option value="https://izylleannealbarico.github.io/unwritten/albarico-blog2.html" title="BLOG 2">BLOG 2: NON-TECH - PERSONAL VOICE</option>
-        <option value="https://izylleannealbarico.github.io/unwritten/albarico-blog3.html" title="BLOG 3">BLOG 3: CAREER AND FUTURE GOALS</option>
-      </select>
-    </li>
-    <li class="separator"></li>
-    <li><a href="https://izylleannealbarico.github.io/unwritten/gallery.html" title="Photo Gallery">Photo Gallery</a></li>
-    <li class="separator"></li>
-    <li><a href="https://izylleannealbarico.github.io/unwritten/media.html" title="Media">Media</a></li>
-    <li class="separator"></li>
-    <li><a href="https://izylleannealbarico.github.io/unwritten/places.html" title="Travel">Travel</a></li>
-  </ul>
-</nav>
-</header>
-     <div class="greetings">
-          <div class="description">
-               <h1>Hi!<br>I'm Izylle</h1>
-               <p>Welcome! This is a story of a young girl as she navigates through life filled with wonder and passion. She describes herself as a scientist or an architect, a deeply stubborn and driven person who designs her own path to success.</p>
-               <p>However, behind her glasses hides a poetic soul with a heart so generous that it bleeds.</p>
-               <p>Come with us on this journey of finding the balance between the <em>mind</em> and <em>heart</em>.</p>
+    <header>
+        <div class="logo">
+            <a href="images/logo-web.png" target="_blank"><img src="images/logo-web.png" alt="Unwritten Logo" title="Unwritten"></a>
+            <div class="web-name">
+                <p>Unwritten</p>
+            </div>   
+        </div>
+        <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a class="active" href="https://izylleannealbarico.github.io/unwritten/home.html" title="Home">Home</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/albarico_biography_csad.html" target="portfolio_view" title="About Me">About Me</a></li>
+                        <li>
+                           <a href="#" title="Blog Stories">Blog Stories</i></a>
+                           <ul class="dropdown">
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/ALBARICO_BIO-PART1_CSAD.html" title="Blog 1: I’m a A.I.holic">Blog 1</a></li>
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/albarico-blog2.html" title="Blog 2: I Cannot Sleep!">Blog 2</a></li>
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/albarico-blog3.html" title="Blog 3: Becoming an Idol">Blog 3</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/gallery.html" title="Photo Gallery">Photo Gallery</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/media.html" title="Media">Media</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/places.html" title="Travel">Travel</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/bucketlist.html" title="Bucket List">Bucket List</a></li>
+                    </ul>
+        </nav>
+    </header>
+    <main>
+     <div class="content">
+          <div class="box">
+               <div class="intro-container">
+                    <h1>Hi, Welcome!</h1>
+                    <p style="font-size: 18px;">My name is Izylle. I'm an aspiring full-stack software developer and future tech CEO.</p>
+                    <div class="link-pages">
+                    <p><a href="https://izylleannealbarico.github.io/unwritten/albarico_biography_csad.html">About Me<i class="fa-solid fa-arrow-right"></i>
+                    </a></p>
+                    </div>
+               </div>
+                <div class="media-container">
+                    <img src="images/id.png" alt="">
+                </div>
           </div>
-          <img src="images/id.png" alt="Id picture" title="Izylle">
      </div>
-      
+     <div class="content">
+          <div class="labels">
+                <h1>Latest Blogs</h1>
+          </div>
+           <!--blog pages-->
+          <div class="blog-pages">
+               <!--blog1-->
+               <div class="blog">
+                    <a href="images/ai-blog.jpg"><img src="images/ai-blog.jpg" alt="">
+                    </a>
+                    <div class="preview">
+                         <h1 style="font-size: 30px; margin-bottom: 5px;">I’m a A.I.holic</h1>
+                         <p>This blog discusses my increasing dependency on AI and how I plan to overcome it.</p>
+                         <div class="link-pages">
+                         <p>
+                              <a href="https://izylleannealbarico.github.io/unwritten/ALBARICO_BIO-PART1_CSAD.html">
+                                   View Full Post<i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                         </p>
+                         </div>
+                    </div>
+               </div>
+               <!--blog2-->
+               <div class="blog">
+                    <a href="images/exam.jpg"><img src="images/exam.jpg" alt="">
+                    </a>
+                    <div class="preview">
+                         <h1 style="font-size: 30px; margin-bottom: 5px;">I Cannot Sleep!</h1>
+                         <p>This blog discusses my unhealthy work ethic and how I plan to change it.</p>
+                         <div class="link-pages">
+                         <p>
+                              <a href="https://izylleannealbarico.github.io/unwritten/albarico-blog2.html">
+                                   View Full Post<i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                         </p>
+                         </div>
+                    </div>
+               </div>
+               <!--blog3-->
+               <div class="blog">
+                    <a href="images/lodi3.jpg"><img src="images/lodi3.jpg" alt="">
+                    </a>
+                    <div class="preview">
+                         <h1 style="font-size: 30px; margin-bottom: 5px;">Becoming an Idol</h1>
+                         <p>This blog discusses ambitions and plans for my future career.</p>
+                         <div class="link-pages">
+                         <p>
+                              <a href="https://izylleannealbarico.github.io/unwritten/albarico-blog3.html">
+                                   View Full Post<i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                         </p>
+                         </div>
+                    </div>
+               </div>
+               
+          </div>
+     </div>
+     <div class="content">
+          <div class="labels">
+               <h1>Photo Highlights</h1>
+          </div>
+          <div class="gallery-accordion">
+               <div class="panel active" style="background-image: url('images/kids.jpg');">
+                    <div class="panel-content">
+                         <h2>Personal Pictures</h2>
+                         <a href="https://izylleannealbarico.github.io/unwritten/gallery.html" class="gallery-link">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+               </div>
 
-    <div class="carousel-section">
-    <div class="image-container">
-        <span style="--i: 1">
-             <img src="images/book.jpg" alt="books" title="books"/>
-        </span>
-        <span style="--i: 2">
-             <img src="images/music.jpg" alt="Oksihina by Dionela" title="Oksihina by Dionela"/>
-        </span>
-        <span style="--i: 3">
-             <img src="images/art.jpg" alt="Bandera Filipina  by Juan Luna" title="Bandera Filipina  by Juan Luna" />
-        </span>
-        <span style="--i: 4">
-             <img src="images/physics.jpg" alt="Albert Einstein" title="Albert Einstein" />
-        </span>
-        <span style="--i: 5">
-             <img src="images/cats.jpg" alt="Bombay cat in the field of daisies" title="Bombay cat in the field of daisies"/>
-        </span>
-        <span style="--i: 6">
-             <img src="images/cl3.jpg" alt="UST with Friends" title="UST with Friends"/>
-        </span>
-        <span style="--i: 7">
-             <img src="images/planner.jpg" alt="planner" title="planner" />
-        </span>
-        <span style="--i: 8">
-              <img src="images/quote.jpg" alt="Time and Tide wait for no man" title="Time and Tide wait for no man"/>
-        </span>
-        <span style="--i: 9">
-             <img src="images/grad.jpg" alt="Senior High Graduation" title="Senior High Graduation">
-        </span>
-        <span style="--i: 10">
-             <img src="images/steve.jpg" alt="Steve Jobs" title="Steve Jobs">
-        </span>
-        <span style="--i: 11">
-             <img src="images/cl4.jpg" alt="Field Trip" title="Field Trip">
-        </span>
-        <span style="--i: 12">
-             <img src="images/ceo.jpg" alt="CEO" title="CEO">
-        </span>
-        <span style="--i: 13">
-              <img src="images/cl2.jpg" alt="A team" title="A team">
-        </span>
-        <span style="--i: 14">
-             <img src="images/city.jpg" alt="Building" title="Building">
-        </span>
-        <span style="--i: 15">
-             <img src="images/kids.jpg" alt="skating" title="skating">
-        </span>
+               <div class="panel" style="background-image: url('images/grad.jpg');">
+                    <div class="panel-content">
+                         <h2>Achievements</h2>
+                         <a href="https://izylleannealbarico.github.io/unwritten/gallery.html" class="gallery-link">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+               </div>
 
-    </div>
+               <div class="panel" style="background-image: url('images/planner.jpg');">
+                    <div class="panel-content">
+                         <h2>Skills</h2>
+                         <a href="https://izylleannealbarico.github.io/unwritten/gallery.html" class="gallery-link">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+               </div>
+               <div class="panel" style="background-image: url('images/city.jpg');">
+                    <div class="panel-content">
+                         <h2>Vision Board</h2>
+                         <a href="https://izylleannealbarico.github.io/unwritten/gallery.html" class="gallery-link">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+               </div>
+               <div class="panel" style="background-image: url('images/cats.jpg');">
+                    <div class="panel-content">
+                         <h2>Favorite Things</h2>
+                         <a href="https://izylleannealbarico.github.io/unwritten/gallery.html" class="gallery-link">View Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="content">
+          <div class="labels">
+               <h1 style="margin-bottom: 15px;">Others</h1>
+          </div>
+    <div class="horizontal-scroll-wrapper">
+          <div class="scroll-card">
+               <div class="media-wrapper">
+                    <img src="images/media.png" alt="Media" class="full-image">
+               </div>
+               <div class="content-wrapper">
+                    <h3 class="heading">Media</h3>
+                    <p class="description">A catalogue of my favorite beats, films, and TV Shows on-repeat.</p>
+                    <a href="https://izylleannealbarico.github.io/unwritten/media.html" class="card-btn">View Media <i class="fa-solid fa-arrow-right"></i></a>
+               </div>
+          </div>
+          <div class="scroll-card">
+               <div class="media-wrapper">
+                    <img src="images/travel.jpg" alt="Travel" class="full-image">
+               </div>
+               <div class="content-wrapper">
+                    <h3 class="heading">Dream Trips</h3>
+                    <p class="description">A catalogue of my dream places to visit.</p>
+                    <a href="https://izylleannealbarico.github.io/unwritten/places.html" class="card-btn">View Travel <i class="fa-solid fa-arrow-right"></i></a>
+               </div>
+          </div>
+          <div class="scroll-card">
+               <div class="media-wrapper">
+                    <img src="images/adven.jpg" alt="Bucket List" class="full-image">
+               </div>
+               <div class="content-wrapper">
+                    <h3 class="heading">Bucket List</h3>
+                    <p class="description">A List of 10 things I want to do in my lifetime (before I die).</p>
+                    <a href="https://izylleannealbarico.github.io/unwritten/bucketlist.html" class="card-btn">View Bucket List <i class="fa-solid fa-arrow-right"></i></a>
+               </div>
+          </div>
 
-    <div class="btn-container">
-        <button class="btn" id="prev">Prev</button>
-        <button class="btn" id="next">Next</button>
-    </div>
-    </div>
-  
-  <script src="app.js"></script>
+        </div>
+     </div>
 
-
-<footer>
+    </main>
+    <button id="backToTop" title="Back to Top">↑</button>
+    
+    <footer>
     <p>&copy; 2026 Unwritten. All rights reserved.</p>
     <p>Contact Me:</p>
     
@@ -123,8 +202,8 @@
             <a href="https://www.facebook.com/share/1GTmVuGUGh/">Izylle Anne V. Albarico</a>
         </li>
     </ul>
-</footer>
+   </footer>
+   <script src="gallery.js"></script>
 
-  
 </body>
 </html>

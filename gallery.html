@@ -1,30 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+
     <link rel="stylesheet" href="gallery-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/641ba9ca8c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/641ba9ca8c.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header id="top">
-        <h1 style ="font-size: 50px;">Photo Gallery</h1>
-        <hr width="80%" noshade color="#FFFFFF">
-        <nav class="top-nav">
-            <a href="home.html">Home</a>|
-            <a href="#personal">Personal Pictures</a>|
-            <a href="#achievements">Achievements</a>|
-            <a href="#skills">Skills</a>|
-            <a href="#vission">Vision Board</a>|
-            <a href="#fav">Favorite Things</a>
+
+<body id="top">
+
+<!-- MAIN NAV HEADER -->
+<header>
+        <div class="logo">
+            <a href="images/logo-web.png" target="_blank"><img src="images/logo-web.png" alt="Unwritten Logo" title="Unwritten"></a>
+            <div class="web-name">
+                <p>Unwritten</p>
+            </div>   
+        </div>
+        <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/home.html" title="Home">Home</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/albarico_biography_csad.html" target="portfolio_view" title="About Me">About Me</a></li>
+                        <li>
+                           <a href="#" title="Blog Stories">Blog Stories</i></a>
+                           <ul class="dropdown">
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/ALBARICO_BIO-PART1_CSAD.html" title="Blog 1: I’m a A.I.holic">Blog 1</a></li>
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/albarico-blog2.html" title="Blog 2: I Cannot Sleep!">Blog 2</a></li>
+                                <li><a href="https://izylleannealbarico.github.io/unwritten/albarico-blog3.html" title="Blog 3: Becoming an Idol">Blog 3</a></li>
+                           </ul>
+                        </li>
+                        <li><a class="active" href="https://izylleannealbarico.github.io/unwritten/gallery.html" title="Photo Gallery">Photo Gallery</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/media.html" title="Media">Media</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/places.html" title="Travel">Travel</a></li>
+                        <li><a href="https://izylleannealbarico.github.io/unwritten/bucketlist.html" title="Bucket List">Bucket List</a></li>
+                    </ul>
         </nav>
-    </header>
+</header>
+<!-- PAGE TITLE -->
+<h1 class="page-title">Photo Gallery</h1>
+<hr class="title-line">
+
+<!-- SUB NAV -->
+<nav class="top-nav">
+    <a href="#personal">Personal Pictures</a> |
+    <a href="#achievements">Achievements</a> |
+    <a href="#skills">Skills</a> |
+    <a href="#vission">Vision Board</a> |
+    <a href="#fav">Favorite Things</a>
+</nav>
+
+<!-- GALLERY -->
 <main>
-    <div class="gallery-section">
+<div class="gallery-section">
     <h1 id="personal" class="section-title">Personal Pictures</h1>
     <div class="gallery-container">
         <!--1-->
@@ -113,9 +145,6 @@
         </div>
     </div>  
 </div>
-<div class="back">
-    <p>Go to <a href="#top">Top</a></p>
-</div>
 
 <div class="gallery-section">
     <h1 id="achievements" class="section-title">Achievements</h1>
@@ -177,9 +206,6 @@
             <div class="desc">Best in Calculus</div>
         </div>
     </div>  
-</div>
-<div class="back">
-    <p>Go to <a href="#top">Top</a></p>
 </div>
 
 <div class="gallery-section">
@@ -257,9 +283,6 @@
         </div>
     </div>  
 </div>
-<div class="back">
-    <p>Go to <a href="#top">Top</a></p>
-</div>
 
 <div class="gallery-section">
     <h1 id="vission" class="section-title">Vision Board</h1>
@@ -335,9 +358,6 @@
             <div class="desc">Robots</div>
         </div>
     </div>
-</div>
-<div class="back">
-    <p>Go to <a href="#top">Top</a></p>
 </div>
 
 <div class="gallery-section">
@@ -415,30 +435,29 @@
         </div>
     </div>
 </div>
-<div class="back">
-    <p>Go to <a href="#top">Top</a></p>
-</div>
+
 </main>
 
-<footer>
-        <p class="rights">&copy; 2026 Unwritten. All rights reserved.</p>
-        <p class="rights">Contact Me:</p>
-        
-        <ul class="contacts">
-            <li>
-                <i class="fa-solid fa-at"></i>
-                <a href="mailto:albarico.izylleanne@ue.edu.ph">albarico.izylleanne@ue.edu.ph</a>
-            </li>
-            <li>
-                <i class="fa-brands fa-facebook"></i>
-                <a href="https://www.facebook.com/share/1GTmVuGUGh/">Izylle Anne V. Albarico</a>
-            </li>
-        </ul>
+<!-- BACK TO TOP -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+ <footer>
+    <p>&copy; 2026 Unwritten. All rights reserved.</p>
+    <p>Contact Me:</p>
     
-</footer>
+    <ul class="contacts">
+        <li>
+            <i class="fa-solid fa-at"></i>
+            <a href="mailto:albarico.izylleanne@ue.edu.ph">albarico.izylleanne@ue.edu.ph</a>
+        </li>
+        <li>
+            <i class="fa-brands fa-facebook"></i>
+            <a href="https://www.facebook.com/share/1GTmVuGUGh/">Izylle Anne V. Albarico</a>
+        </li>
+    </ul>
+   </footer>
 
+
+<script src="gallery.js"></script>
 </body>
-
 </html>
-
-

@@ -1,258 +1,321 @@
-header { 
-    margin-top: 0;
-    padding: 20px 0; /* Reduced padding */
-    height: auto;    /* Allow height to adjust to content */
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #002147;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: 48px; /* Slightly smaller for better balance */
-    margin-bottom: 15px;
-    color: #FFFFFF;
-}
-
-.navbar select {
-    background: transparent;
-    color: white;
-    border: 1px solid #CBC3E3;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-}
-
-.navbar select option {
-    background-color: #002147; /* Dark background for dropdown options */
-    color: white;
-}
-
-.navbar label {
-    color: #FFFFFF;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Ensures label and links align perfectly */
-    gap: 20px;
-    padding: 10px;
-}
-
-.separator {
-    width: 1px;
-    height: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.navbar a{
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    color: #FFFFFF;
-    transition: color 0.3s ease;
-
-}
-
-.navbar a.active {
-    color: #7f55ff;           /* Example: purple highlight */
-    font-weight: bold;        /* Optional: make it stand out */
-    padding-bottom: 2px;      /* Gives space for the underline */
-    border-bottom: 2px solid #7f55ff; /* Optional underline */
-   
-}
-
-.navbar a:hover{
-    color: #CBC3E3;
-}
-
-.grid-gallery {
-  --size: 100px;
-  display: grid;
-  grid-template-columns: repeat(6, var(--size));
-  grid-auto-rows: var(--size);
-  gap: 5px;
-  place-items: start center;
-  margin-bottom: var(--size);
-}
-
-.grid-gallery img {
-  width: calc(var(--size) * 2);
-  height: calc(var(--size) * 2);
-  object-fit: cover;
-  grid-column: auto / span 2;
-  border-radius: 5px;
-  clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z"); 
-}
-
-.grid-gallery img:nth-child(5n - 1) { 
-  grid-column: 2 / span 2 
-}
-
-.grid-gallery:has(img:hover) img:not(:hover) {
-  filter: brightness(0.5) contrast(0.5);
-}
-
-.grid-gallery img {
-  transition: clip-path 0.25s, filter 0.75s;
-}
-
-.grid-gallery img:hover {
-  clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
-  transition: clip-path 0.25s, filter 0.25s;
-  z-index: 1;
-}
-
-.grid-gallery a:focus {
-  outline: 1px dashed black;
-  outline-offset: -5px;
+h1{
+    font-family: Georgia, Cambria, Cochin, serif;
 }
 
 body {
     margin: 0;
-    background-color: #f0f8ff; /* Matches your screenshot background */
-    /* REMOVE: display: flex, justify-content, align-items, height: 100vh */
-    overflow-x: hidden; /* Prevents side-scrolling from 3D rotation */
+    background-color: #f0f8ff; 
+    overflow: visible; 
 }
 
-.shadows-into-light-regular {
-  font-family: "Shadows Into Light", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.permanent-marker-regular {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.greetings{
+.logo{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 50px;
-    padding: 60px 10%;
+    gap: 10px;
+    width: auto;
 }
 
-.description{
+.logo img{
+    margin: 0;
+    float: none;
+    width: 50px;
+    height: 50px;
+}
+.logo .web-name p{
+    padding: 0;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    width: auto;
+    margin-left: auto;
+    padding: 0;
+}
+
+.navbar a.active {
+    color: #4e16f6;           /* Example: purple highlight */
+    font-weight: bold;        /* Optional: make it stand out */
+}
+
+.nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0 20px;
+    gap: 10px;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.nav-list li{
+    position: relative;
+}
+
+.navbar li a{
+    text-decoration: none;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.nav-list li a:hover{
+    background-color: #8ea2e7;
+}
+
+ul li ul.dropdown li a{
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+}
+
+ul li ul.dropdown{
+    list-style-type: none;
+    width: 100%;
+    background: rgba(34, 67, 140, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    display: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+.content{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    gap: 10px;
+
+}
+
+.content h1{
+    text-align: left;
+    font-family: Georgia, Cambria, Cochin, serif;
+    color: #000000;
+    font-size: 50px;
+    line-height: 1;
+}
+
+
+.content h2, h3{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.content p{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 2;
+    color: #000000;
+    
+}
+
+.content .box{
+    margin: 50px;
+    padding: 40px;
+    
+    justify-content: space-between;
+    align-items: center;
+    min-height: 400px;
+    display: flex;
+    gap: 20px;
+
+    overflow: vissible;
+    
+}
+
+.intro-container{
+    flex: 1;
+}
+
+.content .media-container {
+    flex-shrink: 0;
+
+}
+
+.content .media-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  
+
+}
+/* 1. Tighten the Parent Container */
+.content .blog-pages {
+    display: flex;
+    justify-content: center; /* Keeps cards centered as a group */
+    flex-wrap: wrap; 
+    gap: 30px;       /* This is the ONLY value you need to change to adjust distance */
+    margin: 20px auto; 
+    padding: 20px;   /* Space inside the green border */
+    min-height: 400px;
+    
+}
+
+/* 2. Modern Card: Remove individual margins */
+.content .blog-pages .blog {
+    width: 320px;
+    min-height: 450px;
+    /* Removed margin: 10px; - Let the container's GAP handle it */
+    padding: 25px; 
     display: flex;
     flex-direction: column;
-    text-align: left;
-    max-width: 500px;
-}
-.description h1{
-    font-family: "Permanent Marker", cursive;
-    color: #000000;
-    font-size: 80px;
-    text-align: left;
-    line-height: 1.2;
-    margin: 0;
-    font-weight: 400;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    gap: 12px; /* Space between image, title, and button inside the card */
 
+    /* Aesthetic */
+    background-color: #FFFFFF;
+    border-radius: 24px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05); 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.description p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+/* Hover effect stays snappy */
+.content .blog-pages .blog:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
-.greetings img{
-    width: 500px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px #CBC3E3;
-}
-
-.greetings img:hover{
-    box-shadow: 0px 0px 20px 5px rgba(203, 195, 227, 0.8); 
-    z-index: 1;
-}
-
-/* Create a specific section for the carousel */
-.carousel-section {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 200px); /* subtract header height */
-    
-    display: flex;
-    justify-content: center;
+.link-pages{
+    display: inline-flex;
     align-items: center;
-
-    perspective: 3000px;
-    overflow: hidden;
-}
-
-.image-container {
-    position: relative;
-    width: 200px;
-    height: 300px;
-
-    margin: auto;
-
-    transform-style: preserve-3d;
-    transform-origin: center center;
-    transition: transform 0.7s ease-in-out;
-
-    transform: translateZ(-500px) rotateY(0deg);
-}
-
-.image-container span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* 24deg for 15 images. Increase 550px if they still overlap. */
-    transform-origin: center center;
-    transform: rotateY(calc(var(--i) * 24deg)) translateZ(550px);
-}
-.image-container span img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* 'contain' ensures the whole image is seen without cropping */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-/* Fix the button container to sit at the bottom */
-.btn-container {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    gap: 50px;
-    z-index: 10;
-}
-
-.btn {
-    background-color: #00008b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    justify-content: center;
+    padding: 10px 25px;
+    background-color: #066fe7;
+    border-radius: 75px;
+    margin-top: 20px;
     cursor: pointer;
-    font-family: Arial, sans-serif;
-}
-#prev{
-    left: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#next{
-    right: 20%;
+.link-pages p{
+    margin: 0;
+    line-height: 1;
 }
 
-#btn:hover{
-    filter: brightness(1.5);
+.link-pages a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.link-pages:hover{
+    background-color: #3895ff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.link-pages:hover a{
+   color:#033b7c;
+}
+
+/* Add space and vertical alignment to the icon */
+.link-pages a i {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Fun hover effect: make the arrow nudge to the right */
+.link-pages:hover i {
+    transform: translateX(5px);
+    transition: transform 0.2s ease-in-out;
+    display: inline-block; /* Required for transform to work on <i> tags */
+}
+.content .labels{
+    margin-top: 50px;
+}
+.content .labels h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+}
+.content .blog img {
+    /* Stabilize Dimensions */
+    width: 100%;       /* Fills the entire width of the card padding */
+    height: 220px;     /* Fixed height keeps all cards uniform */
+    
+    /* The "Pro" Fixes */
+    object-fit: cover; /* Ensures the photo doesn't look squished or stretched */
+    display: block;    /* Removes extra bottom whitespace */
+    
+    /* Spacing & Style */
+    margin: 0 auto;    /* Centers the image perfectly if it's smaller than the card */
+    border-radius: 18px; 
+    
+    /* Modern shadow to make the image "pop" inside the card */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.content .preview{
+    display: block;
+    margin: 0;
+    padding: 10;
+    width: 100%;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    word-wrap: break-word;
+    
+}
+
+.content .preview p{
+    text-align: justify;
+    margin: 0;
+    padding: 10px;
+    white-space: normal;
+    word-break: break-all;
+
 }
 
 footer {
@@ -301,3 +364,241 @@ footer {
 .contacts a:hover {
     color: #CBC3E3;
 }
+
+
+.content .preview .link-pages{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #066fe7;
+    border-radius: 75px;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the accordion */
+.gallery-accordion {
+    display: flex;
+    width: 90%;
+    height: 500px;
+    margin: 50px auto;
+    gap: 15px;
+}
+
+/* Base style for each panel */
+.panel {
+    flex: 1; /* Default size when closed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    /* Smooth transition for both opening and closing */
+    transition: flex 0.7s ease-in-out, box-shadow 0.3s ease;
+    /* Subtle dark overlay for text readability */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2); 
+}
+
+/* The "Opening" Logic: Triggers on hover or mobile tap (focus) */
+.panel:hover, 
+.panel:focus-within {
+    flex: 7; /* Expands the panel */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Darkens more on focus */
+}
+
+/* Container for the text inside panels */
+.panel-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: white;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Prevents text from interfering with hover */
+    transition: opacity 0.4s ease;
+}
+
+/* Reveal content ONLY when the panel is hovered/expanded */
+.panel:hover .panel-content, 
+.panel:focus-within .panel-content {
+    opacity: 1;
+    pointer-events: auto; /* Re-enables link clicking when visible */
+}
+
+.panel-content h2 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+/* The Gallery Button inside the panel */
+.gallery-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(8px); /* Modern frosted glass effect */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.gallery-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+.gallery-link i {
+    transition: transform 0.3s ease;
+}
+
+.gallery-link:hover i {
+    transform: translateX(5px); /* Arrow nudges right */
+}
+/* Container: Centered and polished */
+.horizontal-scroll-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+/* Card: Ensuring uniform height and layout */
+.scroll-card {
+    flex: 0 0 320px;
+    height: 480px; /* Fixed height for consistency */
+    background: #ffffff;
+    border-radius: 20px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+/* Image section: Fixed height proportion */
+.media-wrapper {
+    height: 55%; 
+    width: 100%;
+}
+
+.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* Text & Button section: The Flex Magic */
+.content-wrapper {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Fills the bottom 45% of the card */
+}
+
+.heading {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.description {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1; /* This pushes the button down by taking up available space */
+}
+
+/* Button: Consistent sizing */
+.card-btn {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    align-self: flex-start; /* Keeps the button from stretching wide */
+    padding: 10px 20px;
+    background-color: #066fe7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #3895ff;
+}
+
+.card-btn:hover a{
+    color:#033b7c;
+}
+
+.card-btn:hover a i {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Fun hover effect: make the arrow nudge to the right */
+.card-btn:hover i {
+    transform: translateX(5px);
+    transition: transform 0.2s ease-in-out;
+    display: inline-block; /* Required for transform to work on <i> tags */
+}
+
+/* Card: Ensuring uniform height and layout */
+.scroll-card {
+    flex: 0 0 320px;
+    height: 480px; 
+    background: #ffffff;
+    border-radius: 20px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* This transition makes the move-up effect smooth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* The Hover Effect: Moves the card up and deepens the shadow */
+.scroll-card:hover {
+    transform: translateY(-15px); /* Moves the card 15px upwards */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow to look like it's floating */
+}
+
+/* BACK TO TOP */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #066fe7;
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+    background: #004080;
+    transform: translateY(-4px);
+}
+

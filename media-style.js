@@ -85,3 +85,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// Select ALL audio elements on the page
+const allAudios = document.querySelectorAll('audio');
+
+allAudios.forEach(audio => {
+    audio.addEventListener('timeupdate', function() {
+        // Check if the current song has passed 30 seconds
+        if (this.currentTime >= 30) {
+            this.pause();
+            this.currentTime = 0; // Resets to the start
+            
+            // Optional: Reset the play button icon back to 'play'
+            const container = this.closest('.container');
+            const playBtn = container.querySelector('.play-btn');
+            if (playBtn) {
+                playBtn.classList.replace('fa-pause', 'fa-play');
+            }
+
+            alert("Preview limit reached."); 
+        }
+    });
+});
